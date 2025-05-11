@@ -3,24 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	//operator relasional untuk membandingkan dua nilai
-	// operator ini menghasilkan nilai boolean true atau false
-
+	// operator logika
 	/*
-		==  sama dengan
-		!=  tidak sama dengan
-		>   lebih besar dari
-		<   lebih kecil dari
-		>=  lebih besar dari sama dengan
-		<=  lebih kecil dari sama dengan
+		- AND (&&)
+		- OR (||)
+		- NOT (!)
 	*/
 
-	var angka1 int = 10
-	var angka2 int = 20
-
-	fmt.Printf("%d == %d: %t \n", angka1, angka2, angka1 == angka2)
-	fmt.Printf("%d != %d: %t \n", angka1, angka2, angka1 != angka2)
-	fmt.Printf("%d > %d: %t \n", angka1, angka2, angka1 > angka2)
-	fmt.Printf("%d < %d: %t \n", angka1, angka2, angka1 < angka2)
-	fmt.Printf("%d >= %d: %t \n", angka1, angka2, angka1 >= angka2)
+	fmt.Printf("true && false: %t \n", 1 == 1 && 3 == 2)
+	fmt.Printf("true || false: %t \n", 1 == 1 || 3 == 2)
+	fmt.Printf("!true: %t \n", !(1 == 3))
 }

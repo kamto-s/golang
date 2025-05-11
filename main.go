@@ -3,32 +3,24 @@ package main
 import "fmt"
 
 func main() {
+	//operator relasional untuk membandingkan dua nilai
+	// operator ini menghasilkan nilai boolean true atau false
+
 	/*
-			+ penambahan
-			- pengurangan
-			* perkalian
-			/ pembagian
-			% modulus
-		++ increment (menambah 1)
-		-- decrement (mengurangi 1)
+		==  sama dengan
+		!=  tidak sama dengan
+		>   lebih besar dari
+		<   lebih kecil dari
+		>=  lebih besar dari sama dengan
+		<=  lebih kecil dari sama dengan
 	*/
 
 	var angka1 int = 10
-	var angka2 int = 5
+	var angka2 int = 20
 
-	penjumlahan := angka1 + angka2
-	pengurangan := angka1 - angka2
-	perkalian := angka1 * angka2
-	pembagian := angka1 / angka2
-	modulus := angka1 % angka2
-	angka1++
-	angka2--
-
-	fmt.Println("Hasil penjumlahan: ", penjumlahan)
-	fmt.Println("Hasil pengurangan: ", pengurangan)
-	fmt.Println("Hasil perkalian: ", perkalian)
-	fmt.Println("Hasil pembagian: ", pembagian)
-	fmt.Println("Hasil modulus: ", modulus)
-	fmt.Println("Hasil increment +1: ", angka1)
-	fmt.Println("Hasil decrement -1: ", angka2)
+	fmt.Printf("%d == %d: %t \n", angka1, angka2, angka1 == angka2)
+	fmt.Printf("%d != %d: %t \n", angka1, angka2, angka1 != angka2)
+	fmt.Printf("%d > %d: %t \n", angka1, angka2, angka1 > angka2)
+	fmt.Printf("%d < %d: %t \n", angka1, angka2, angka1 < angka2)
+	fmt.Printf("%d >= %d: %t \n", angka1, angka2, angka1 >= angka2)
 }

@@ -1,32 +1,34 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 func main() {
-	// strconv
-	fmt.Println("===================================")
-	fmt.Println("Konversi string ke int")
-	var stringAngka string = "123"
-	angkaInt, _ := strconv.ParseInt(stringAngka, 10, 64)
-	fmt.Printf("Tipe data: %T \nValue: %v \n", angkaInt, angkaInt)
+	/*
+			+ penambahan
+			- pengurangan
+			* perkalian
+			/ pembagian
+			% modulus
+		++ increment (menambah 1)
+		-- decrement (mengurangi 1)
+	*/
 
-	fmt.Println("===================================")
-	fmt.Println("Konversi string ke float")
-	var stringAngka2 string = "10.123"
-	angkaInt2, _ := strconv.ParseFloat(stringAngka2, 64)
-	fmt.Printf("Tipe data: %T \nValue: %v \n", angkaInt2, angkaInt2)
+	var angka1 int = 10
+	var angka2 int = 5
 
-	fmt.Println("===================================")
-	fmt.Println("Konversi string ke bool")
-	var stringAngka3 string = "0"
-	angkaInt3, _ := strconv.ParseBool(stringAngka3)
-	fmt.Printf("Tipe data: %T \nValue: %v \n", angkaInt3, angkaInt3)
+	penjumlahan := angka1 + angka2
+	pengurangan := angka1 - angka2
+	perkalian := angka1 * angka2
+	pembagian := angka1 / angka2
+	modulus := angka1 % angka2
+	angka1++
+	angka2--
 
-	//
-	//
-	//
-	fmt.Println("===================================")
+	fmt.Println("Hasil penjumlahan: ", penjumlahan)
+	fmt.Println("Hasil pengurangan: ", pengurangan)
+	fmt.Println("Hasil perkalian: ", perkalian)
+	fmt.Println("Hasil pembagian: ", pembagian)
+	fmt.Println("Hasil modulus: ", modulus)
+	fmt.Println("Hasil increment +1: ", angka1)
+	fmt.Println("Hasil decrement -1: ", angka2)
 }

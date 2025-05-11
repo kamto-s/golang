@@ -3,18 +3,48 @@ package main
 import "fmt"
 
 func main() {
-	//percabangan if else
-	nilai := 65
+	angka := 4
 
-	if nilai >= 90 && nilai <= 100 {
-		fmt.Println("Nilai Anda A")
-	} else if nilai >= 80 && nilai < 90 {
-		fmt.Println("Nilai Anda AB")
-	} else if nilai >= 70 && nilai < 80 {
-		fmt.Println("Nilai Anda B")
-	} else if nilai >= 60 && nilai < 70 {
-		fmt.Println("Nilai Anda C")
-	} else {
-		fmt.Println("Anda Tidak Lulus")
+	switch {
+	case angka > 1:
+		{
+			fmt.Println("Angka lebih besar daripada 1")
+			break
+		}
+	case angka > 2:
+		{
+			fmt.Println("Angka lebih besar daripada 2")
+			break
+		}
+	default:
+		{
+			fmt.Println("Angka tidak dikenali")
+		}
+	}
+
+	nilai := 40
+
+	switch {
+	case nilai >= 90 && nilai <= 100:
+		{
+			fmt.Println("Nilai A")
+			break
+		}
+	case nilai >= 80 && nilai < 90:
+		{
+			fmt.Println("Nilai B")
+			break
+		}
+	case nilai >= 70 && nilai < 80:
+		{
+			fmt.Println("Nilai C")
+			break
+		}
+	default:
+		{
+			fmt.Println("Nilai Anda tidak memenuhi syarat")
+			break
+		}
+
 	}
 }

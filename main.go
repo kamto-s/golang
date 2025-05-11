@@ -4,23 +4,52 @@ import "fmt"
 
 func main() {
 	fmt.Println("==========================")
-	i := 8
+	fmt.Println("***BREAK")
+	i := 1
 	for i <= 10 {
-		fmt.Printf("Nilai ke-%d \n", i)
+		if i == 3 {
+			fmt.Printf("---> Nilai ke-%v \n", i)
+			break
+		}
+
+		fmt.Printf("Nilai ke-%v \n", i)
 		i++
 	}
+	fmt.Println("baris ini tereksekusi setelah break")
 
 	fmt.Println("==========================")
 
-	for i := 1; i <= 10; i++ {
-		fmt.Printf("Nilai ke-%v \n", i)
+	// continue melanjutkan perulangan setelah kondisi tertentu
+	fmt.Println("***CONTINUE")
+	x := 1
+
+	for x <= 10 {
+		if x == 3 {
+			fmt.Printf("---> Nilai ke-%v stop, tetapi tetap dilanjut dengan kondisi x += 7 \n", x)
+			x += 7
+			continue
+		}
+
+		fmt.Printf("Nilai ke-%v \n", x)
+		x++
 	}
 
 	fmt.Println("==========================")
+	fmt.Println("***GOTO")
+	// goto adalah pernyataan yang digunakan untuk melompat ke label tertentu dalam kode
+	y := 1
 
-	for i := 1; i <= 10; i += 2 {
-		fmt.Printf("Nilai ke-%v \n", i)
+	for y <= 10 {
+
+		if y == 5 {
+			fmt.Printf("---> Nilai ke-%v stop, langsung loncat_kesini \n", y)
+			goto loncat_kesini
+		}
+
+		fmt.Printf("Nilai ke-%v \n", y)
+		y++
 	}
 
-	fmt.Println("==========================")
+loncat_kesini:
+	fmt.Println("ini adalah label loncat_kesini")
 }
